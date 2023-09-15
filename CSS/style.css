@@ -1,0 +1,42 @@
+/* Design System */
+:root{
+    /* Color */
+    --blue: #0065FC;
+    --light-blue: #DEEBFF;
+    --grey: #F2F2F2;
+
+    /* Text configuration */
+    --nav-font: 'Raleway';
+    --section-title-font: 'Raleway';   
+    --info-font: 'Raleway';
+    --filter-font: 'Raleway';
+    --card-title-font: 'Raleway';
+    --card-font: 'Raleway';
+    --footer-link-font: 'Raleway';
+    --footer-title-font:'Raleway';
+
+    --nav-font-weight: 400;
+    --section-title-font-weight: 700;
+    --info-font-weight: 400;
+    --filter-font-weight: 700;
+    --card-title-font-weight: 700;
+    --card-font-weight: 400;
+    --footer-link-weight:400;
+    --footer-title-weight:700;
+
+    --nav-font-size: 1rem; /* 16px */
+    --section-title-font-size: 1.375rem; /* 22px */
+    --info-font-size: 1rem; /* 16px */
+    --filter-font-size: 1.125rem; /* 18px */
+    --card-title-font-size: 1rem; /* 16px */
+    --card-font-size: 0.875rem; /* 14px */
+    --footer-link-font-size: 1rem; /* 16px */
+    --footer-title-font-size: 1.125rem; /* 18px */
+
+}
+
+.section-title {
+    font-family: var(--section-title-font),sans-serif;
+    font-weight: var(--section-title-font-weight);
+    font-size: var(--section-title-font-size);
+}
