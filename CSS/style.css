@@ -56,6 +56,12 @@ body {
     font-weight: var(--nav-font-size);
 }
 
+.main-section-title {
+    font-family: var(--section-title-font),sans-serif;
+    font-size: var(--section-title-font-size);
+    font-weight: var(--section-title-font-weight);  
+}
+
 .section-title {
     font-family: var(--section-title-font),sans-serif;
     font-size: var(--section-title-font-size);
@@ -90,6 +96,7 @@ footer {
     font-family: var(--footer-link-font),sans-serif;
     font-size: var(--footer-link-font-size);
     font-weight: var(--footer-link-font-weight);
+    background-color: var(--grey);
 }
 
 .affichez-plus{
@@ -100,4 +107,8 @@ footer {
 
 a{
     text-decoration: none;
+}
+
+.hebergements_and_populaires {
+    background-color: var(--grey);
 }
