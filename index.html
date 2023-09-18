@@ -12,7 +12,7 @@
     <body>
         <header>
             <img src="images/logo/Logo.svg" alt="Logo">
-            <nav>
+            <nav class="nav-title">
                 <ul>
                     <li>Hébergements</li>
                     <li>Activités</li>
@@ -22,7 +22,7 @@
         <main>
             <section> <!--Section "Trouver votre hébergement"-->
                 <h1 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p>En plein centre-ville ou en pleine nature</p>
+                <p class="info-subtitle">En plein centre-ville ou en pleine nature</p>
                 <form> <!--Formulaire de recherche-->
                     <button><i class="fa-solid fa-location-dot"></i></button>
                     <input type="search" id="site-search"  name="q">
@@ -31,7 +31,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i><!--Version mobile du bouton-->
                     </button> 
                 </form>
-                <div> <!--Filtres-->
+                <div class="filter-title"> <!--Filtres-->
                     <p>Filtres</p>
                     <a href="#">
                         <div>
@@ -58,7 +58,7 @@
                         </div>
                     </a>
                 </div>
-                <p><span>i</span> Plus de 500 logements sont disponibles dans cette ville</p>
+                <p class="info-subtitle"><span>i</span> Plus de 500 logements sont disponibles dans cette ville</p>
             </section>
             <div> <!--Group "Hébergements" & "+Populaires"-->
                 <section> <!--Section "Hébergements"-->
@@ -67,8 +67,8 @@
                         <article>
                             <img src="images/hebergements/fred-kleber.jpg" alt="Chambre avec un lit double et un lit simple">
                             <div>
-                                <h3>Hôtel du port</h3>
-                                <p>Nuit à partir de 52<strong>€</strong></p>
+                                <h3 class="article-title">Hôtel du port</h3>
+                                <p class="article-subtitle">Nuit à partir de 52<strong>€</strong></p>
                                 <div>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -80,8 +80,8 @@
                         </article>
                         <article>
                             <img src="images/hebergements/febrian-zakaria.jpg" alt="Chambre avec deux lits doubles et un bureau">
-                            <h3>Hôtel Chez Amina</h3>
-                            <p>Nuit à partir de 96<strong>€</strong></p>
+                            <h3 class="article-title">Hôtel Chez Amina</h3>
+                            <p class="article-subtitle">Nuit à partir de 96<strong>€</strong></p>
                             <div>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -92,8 +92,8 @@
                         </article>
                         <article>
                             <img src="images/hebergements/reisetopia.jpg" alt="Chambre avec lit simple devant armoire avec miroir">
-                            <h3>Hôtel Les mouettes</h3>
-                            <p>Nuit à partir de 76<strong>€</strong></p>
+                            <h3 class="article-title">Hôtel Les mouettes</h3>
+                            <p class="article-subtitle">Nuit à partir de 76<strong>€</strong></p>
                             <div>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -103,7 +103,7 @@
                             </div>
                         </article>
                     </div>
-                    <a href="#">Afficher plus</a>
+                    <a href="#" class="affichez-plus">Afficher plus</a>
                 </section>
                 <section> <!--Section "+Populaires"-->
                     <div>
@@ -114,8 +114,8 @@
                         <article>
                             <img src="images/hebergements/emile-guillemot.jpg" alt="Chambre avec lit double devant miroir avec lustre au plafond">
                             <div>
-                                <h3>Auberge la Canebière</h3>
-                                <p>Nuit à partir de 25<strong>€</strong></p>
+                                <h3 class="article-title">Auberge la Canebière</h3>
+                                <p class="article-subtitle">Nuit à partir de 25<strong>€</strong></p>
                             </div>
                             <div>
                                 <i class="fa-solid fa-star"></i>
@@ -128,8 +128,8 @@
                         <article>
                             <img src="images/hebergements/aw-creative.jpg" alt="Lit double dans une suite moderne">
                             <div>
-                                <h3>Chambres d'hôtes Au cœur de l'eau</h3>
-                                <p>Nuit à partir de 71<strong>€</strong></p>
+                                <h3 class="article-title">Chambres d'hôtes Au cœur de l'eau</h3>
+                                <p class="article-subtitle">Nuit à partir de 71<strong>€</strong></p>
                             </div>
                             <div>
                                 <i class="fa-solid fa-star"></i>
@@ -142,8 +142,8 @@
                         <article>
                             <img src="images/hebergements/febrian-zakaria2.jpg" alt="Chambre avec un lit double">
                             <div>
-                                <h3>Hôtel Bleu et Blanc</h3>
-                                <p>Nuit à partir de 68<strong>€</strong></p>
+                                <h3 class="article-title">Hôtel Bleu et Blanc</h3>
+                                <p class="article-subtitle">Nuit à partir de 68<strong>€</strong></p>
                             </div>
                             <div>
                                 <i class="fa-solid fa-star"></i>
@@ -161,37 +161,37 @@
                 <div>
                     <article>
                         <img src="images/activites/reno-laithienne.jpg" alt="Port de plaisance dans un centre ville">
-                        <h3>Vieux-Port</h3>
+                        <h3 class="article-title">Vieux-Port</h3>
                     </article>
                     <article>
                         <img src="images/activites/paul-hermann.jpg" alt="Fort sur une falaise rocheuse">
-                        <h3>Fort de Pomègues</h3>
+                        <h3 class="article-title">Fort de Pomègues</h3>
                     </article>
                     <article>
                         <img src="images/activites/kilyan-sockalingum.jpg" alt="Vue mer en haut d'une calanque">
-                        <h3>Parc national des Calanques</h3>
+                        <h3 class="article-title">Parc national des Calanques</h3>
                     </article>
                     <article>
                         <img src="images/activites/florian-wehde.jpg" alt="Vue de la basilique du centre ville">
-                        <h3>Notre-Dame-de-la-Garde</h3>
+                        <h3 class="article-title">Notre-Dame-de-la-Garde</h3>
                     </article>
                 </div>
             </section>
         </main>
         <footer>
             <div>
-                <h2>À propos</h2>
+                <h2 class="footer-title">À propos</h2>
                 <a href="#">Fonctionnement du site</a>
                 <a href="#">Conditions générales</a>
                 <a href="#">Données et confidentialité</a>
             </div>
             <div>
-                <h2>Nos hébergements</h2>
+                <h2 class="footer-title">Nos hébergements</h2>
                 <a href="#">Charte qualité</a>
                 <a href="#">Proposer votre hôtel</a>
             </div>
             <div>
-                <h2>Assistance</h2>
+                <h2 class="footer-title">Assistance</h2>
                 <a href="#">Centre d'aide</a>
                 <a href="#">Nous contacter</a>
             </div>
