@@ -48,12 +48,52 @@ body {
     font-family: var(--body-font),sans-serif;
     font-size: var(--body-font-size);
     font-weight: var(--body-font-weight);
+    /*width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 50px 0 50px;*/ 
 }
 
-.nav-title {
+.appBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4.9rem;/*79*/
+}
+
+.appBar__logo {
+    margin: auto 3.125rem auto 3.125rem;
+}
+
+.appBar__logoIcon {
+    height: 1.188rem;
+    width: 3.819rem;
+}
+
+.appBar__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 2.188rem;
+    width: 21.5rem;
+}
+
+.appBar__navItem {
+    height: 2.188rem;
     font-family: var(--nav-font),sans-serif;
     font-size: var(--nav-font-size);
     font-weight: var(--nav-font-size);
+    color: var(--blue);
+    padding-top: 10px;
+}
+
+.appBar__navItem:hover {
+    border-top: 2px #0065FC solid;
+}
+
+.appBar__navItem:visited{
+    color: var(--blue);
 }
 
 .main-section-title {
@@ -107,6 +147,7 @@ footer {
 
 a{
     text-decoration: none;
+
 }
 
 .hebergements_and_populaires {
