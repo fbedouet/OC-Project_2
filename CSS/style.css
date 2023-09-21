@@ -42,17 +42,30 @@
     --footer-link-font-weight: 400;
     --footer-link-font-size: 1rem; /*16*/
 
+    --body-font-color: rgb(0, 0, 0);
+
 }
 
-body {
+/* Initialization */
+* {
+    margin: 0px;
+}
+/* General title and subitle */
+.section__title {
+    font-family: var(--section-title-font),sans-serif;
+    font-size: var(--section-title-font-size);
+    font-weight: var(--section-title-font-weight);
+    color: var(--body-font-color);
+}
+
+.section__subtitle {
     font-family: var(--body-font),sans-serif;
     font-size: var(--body-font-size);
     font-weight: var(--body-font-weight);
-    /*width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 0 50px 0 50px;*/ 
+    color: var(--body-font-color);
 }
+
+/* Navigation Bar */
 
 .appBar {
     display: flex;
@@ -96,43 +109,84 @@ body {
     color: var(--blue);
 }
 
-.main-section-title {
-    font-family: var(--section-title-font),sans-serif;
-    font-size: var(--section-title-font-size);
-    font-weight: var(--section-title-font-weight);  
+/* Section "Trouver votre hebergement" */
+        /* Search form */
+
+.filterSearch__button {
+    padding: 15px;
+    background:var(--blue);
+    color: white;
+    font-weight: 700;
+    font-family: var(--body-font);
+    border-radius: 0px 15px 15px 0px;
+    border: 2px var(--blue) solid;
+    font-size: 18px;
 }
 
-.section-title {
-    font-family: var(--section-title-font),sans-serif;
-    font-size: var(--section-title-font-size);
-    font-weight: var(--section-title-font-weight);
+.filterSearch__buttonMap {
+    padding: 15px;
+    border: none;
+    background-color: var(--grey);
+    border-radius: 15px 0px 0px 15px;
 }
+
+.filterSearch__textInput {
+    padding: 15px;
+    border:none;
+    border-top: 2px var(--grey) solid;
+    border-bottom: 2px var(--grey) solid;
+}
+
+form {
+    display: flex;
+    margin: 35px 0px;
+}
+
+        /* Filter Bar */
 
 .filterBar {
     display: flex;
-
+    align-items: center;
     font-family: var(--filter-font),sans-serif;
     font-size: var(--filter-font-size);
     font-weight: var(--filter-font-weight);
+    margin-bottom: 35px;
 }
 
 .filterBar__navItem {
-    display: flex;
     margin-left: 10px;
-    flex-direction: row;
-    align-items: center;
+    padding: 10px;
     border: 2px var(--grey) solid;
+    border-radius: 25px;
+    color: var(--body-font-color);
 }
- .filterBar i {
+
+.filterBar__navItem:hover {
+    background-color: var(--light-blue);
+}
+
+ .filterBar span[class*="fa"] {
     color: var(--blue);
     padding-right: 10px;
  }
 
- .filterBar p {
-    color: black;
+.filterInfo{
+    display: flex;
+    align-items: center;
+}
+
+ .section__subtitleInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: var(--blue);
+    border-radius: 50%;
+    border: 1px var(--grey) solid;
  }
-
-
+ 
+ /* Section "Hebergement à Marseille"*/
 .article-title {
     font-family: var(--card-title-font),sans-serif;
     font-size: var(--card-title-font-size);

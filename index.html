@@ -21,44 +21,47 @@
         </header>
         <main>
             <section> <!--Section "Trouver votre hébergement"-->
-                <h1 class="main-section-title">Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p class="info-subtitle">En plein centre-ville ou en pleine nature</p>
+                <h1 class="section__title">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p class="section__subtitle">En plein centre-ville ou en pleine nature</p>
                 <form> <!--Formulaire de recherche-->
-                    <button><i class="fa-solid fa-location-dot"></i></button>
-                    <input type="search" id="site-search"  name="q">
-                    <button>Rechercher</button> <!--Version desktop du bouton-->
-                    <button>
+                    <button class="filterSearch__buttonMap"><i class="fa-solid fa-location-dot"></i></button>
+                    <input type="search" id="site-search"  name="q" class="filterSearch__textInput">
+                    <button class="filterSearch__button">Rechercher</button> <!--Version desktop du bouton-->
+                    <button class="filterSearch__button">
                         <i class="fa-solid fa-magnifying-glass"></i><!--Version mobile du bouton-->
                     </button> 
                 </form>
                 <div class="filterBar"> <!--Filtres-->
-                    <p>Filtres</p>
+                    <span>Filtres</span>
                     <a href="#">
                         <div class="filterBar__navItem">
-                            <i class="fa-solid fa-money-bill-wave"></i>
-                            <p>Économique</p> 
+                            <span class="fa-solid fa-money-bill-wave"></span>
+                            <span>Économique</span> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="filterBar__navItem">
-                            <i class="fa-solid fa-person"></i>
-                            <p>Familial</p> 
+                            <span class="fa-solid fa-person"></span>
+                            <span>Familial</span> 
                         </div>
                     </a> 
                     <a href="#">
                         <div class="filterBar__navItem">
-                            <i class="fa-solid fa-heart"></i>
-                            <p>Romantique</p> 
+                            <span class="fa-solid fa-heart"></span>
+                            <span>Romantique</span> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="filterBar__navItem">
-                            <i class="fa-solid fa-fire"></i>
-                            <p>Nos pépites</p> 
+                            <span class="fa-solid fa-fire"></span>
+                            <span>Nos pépites</span> 
                         </div>
                     </a>
                 </div>
-                <p class="info-subtitle"><span>i</span> Plus de 500 logements sont disponibles dans cette ville</p>
+                <p class="filterInfo"> 
+                    <span class="section__subtitleInfo"><i class="fa-solid fa-info fa-2xs"></i></span>
+                    <span class="section__subtitle">Plus de 500 logements sont disponibles dans cette ville</span>
+                </p>
             </section>
             <div class="hebergements_and_populaires"> <!--Group "Hébergements" & "+Populaires"-->
                 <section> <!--Section "Hébergements"-->
