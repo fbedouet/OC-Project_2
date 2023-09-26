@@ -5,6 +5,7 @@
     --light-blue: #DEEBFF;
     --grey: #F2F2F2;
     --body-font-color: rgb(0, 0, 0);
+    --card-background: white;
 
     /* Text configuration */
     --body-font: 'Raleway';
@@ -39,6 +40,7 @@
     --margin-size_50px: 3.125rem;
     --margin-size_35px: 2.188rem;
     --margin-size_30px: 1.875rem;
+    --margin-size_5px: 0.313rem;
 
     /* Radius size*/
     --radius-size_20px: 1.25rem;
@@ -59,6 +61,11 @@
 
 a{
     text-decoration: none;
+}
+
+main {
+    max-width: 1440px;
+    padding: 0 var(--margin-size_50px);
 }
 
 /* General title and subitle */
@@ -142,10 +149,6 @@ footer h2 {
 
 .appBar__navItem:visited{
     color: var(--blue);
-}
-
-main {
-    margin: 0 var(--margin-size_50px);
 }
 
 /* Section "Trouver votre hebergement" */
@@ -232,7 +235,9 @@ form {
 /*Section "Hébergements et + populaires" */
 .result,
 .resultHosting, .resultPopular,
-.resultHosting__group, .resultPopular__group {
+.resultHosting__group, .resultPopular__group,
+.resultHosting__groupCard,.resultPopular__groupCard,
+.resultPopular__title, .card__detail {
     display: flex;
 }
 
@@ -248,13 +253,23 @@ form {
     padding:var(--margin-size_30px);
     box-sizing: border-box;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap:var(--margin-size_30px);
 }
 
 .resultHosting__group,
 .resultPopular__group {
     gap:var(--margin-size_30px);
+}
+
+.resultHosting__groupCard,
+.resultPopular__groupCard {
+    background-color: var(--card-background);
+    border-radius: var(--radius-size_20px);
+}
+
+.card__detail {
+    flex-direction: column;
 }
 
         /* Section "Hebergement à Marseille"*/
@@ -266,8 +281,25 @@ form {
     flex-direction: row;
 }
 
-.resultHosting__group--card img {
+.resultHosting__groupCard{
+    flex-direction: column;
+    width: 33%;
+}
+
+.resultHosting__groupCard img {
     height: var(--hosting-img-height-size);
+    width: 100%;
+    border-radius: var(--radius-size_20px) var(--radius-size_20px) 0 0;
+    object-fit: cover;
+    padding: var(--margin-size_5px);
+    box-sizing: border-box;
+}
+
+.resultHosting__groupCard .card__detail{
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 
         /* Section "Les plus populaires"*/
@@ -279,6 +311,22 @@ form {
     flex-direction: column;
 }
 
-.resultPopular__group--card img {
+.resultPopular__title {
+    justify-content: space-between;
+}
+.resultPopular__groupCard {
+    flex-direction: row;
+    padding: var(--margin-size_5px);
+}
+
+.resultPopular__groupCard .card__detail {
+    width: 66%;
+    height: 100%;
+}
+
+.resultPopular__groupCard img {
     height: var(--popular-img-height-size);
+    width: 34%;
+    border-radius: var(--radius-size_20px) 0 0 var(--radius-size_20px);
+    object-fit: cover;
 }
