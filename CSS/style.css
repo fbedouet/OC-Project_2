@@ -4,6 +4,7 @@
     --blue: #0065FC;
     --light-blue: #DEEBFF;
     --grey: #F2F2F2;
+    --body-font-color: rgb(0, 0, 0);
 
     /* Text configuration */
     --body-font: 'Raleway';
@@ -16,11 +17,7 @@
 
     --section-title-font: 'Raleway';
     --section-title-font-weight: 700; 
-    --section-title-font-size: 1.375rem; /* 22px */
-    
-    --info-font: 'Raleway';
-    --info-font-weight: 400;
-    --info-font-size: 1rem; /* 16px */
+    --section-title-font-size: 1.375rem; /* 22px */  
 
     --filter-font: 'Raleway';
     --filter-font-weight: 700;
@@ -38,30 +35,68 @@
     --footer-title-font-weight:700;
     --footer-title-font-size: 1.125rem; /* 18px */
 
-    --footer-link-font: 'Raleway';
-    --footer-link-font-weight: 400;
-    --footer-link-font-size: 1rem; /*16*/
+    /* Margin & Padding size */
+    --margin-size_50px: 3.125rem;
+    --margin-size_35px: 2.188rem;
+    --margin-size_30px: 1.875rem;
 
-    --body-font-color: rgb(0, 0, 0);
+    /* Radius size*/
+    --radius-size_20px: 1.25rem;
 
+    /* Percent size*/
+    --hosting-size_pc:65%;
+    --popular-size_pc:32%;
+
+    /* Picture size */
+    --hosting-img-height-size: 124px;
+    --popular-img-height-size: 134px;
 }
 
 /* Initialization */
 * {
     margin: 0px;
 }
+
+a{
+    text-decoration: none;
+}
+
 /* General title and subitle */
-.section__title {
+.filter h1,
+.resultHosting h2,
+.resultPopular h2,
+.activity h2 {
     font-family: var(--section-title-font),sans-serif;
     font-size: var(--section-title-font-size);
     font-weight: var(--section-title-font-weight);
     color: var(--body-font-color);
 }
+.card__detail h3,
+.activity h3 {
+    font-family: var(--card-title-font),sans-serif;
+    font-size: var(--card-title-font-size);
+    font-weight: var(--card-title-font-weight);
+}
 
-.section__subtitle {
+.card__detail p {
+    font-family: var(--card-font),sans-serif;
+    font-size: var(--card-font-size);
+    font-weight: var(--card-font-weight);
+}
+
+.filter p,
+footer a {
     font-family: var(--body-font),sans-serif;
     font-size: var(--body-font-size);
     font-weight: var(--body-font-weight);
+    color: var(--body-font-color);
+}
+
+.resultHosting a,
+footer h2 {
+    font-family: var(--footer-title-font),sans-serif;
+    font-size: var(--footer-title-font-size);
+    font-weight: var(--footer-title-font-weight);
     color: var(--body-font-color);
 }
 
@@ -109,7 +144,14 @@
     color: var(--blue);
 }
 
+main {
+    margin: 0 var(--margin-size_50px);
+}
+
 /* Section "Trouver votre hebergement" */
+.filter {
+    margin-top: var(--margin-size_30px);
+}
         /* Search form */
 
 .filterSearch__button {
@@ -139,7 +181,7 @@
 
 form {
     display: flex;
-    margin: 35px 0px;
+    margin: var(--margin-size_35px) 0px;
 }
 
         /* Filter Bar */
@@ -150,7 +192,7 @@ form {
     font-family: var(--filter-font),sans-serif;
     font-size: var(--filter-font-size);
     font-weight: var(--filter-font-weight);
-    margin-bottom: 35px;
+    margin-bottom: var(--margin-size_35px);
 }
 
 .filterBar__navItem {
@@ -165,17 +207,18 @@ form {
     background-color: var(--light-blue);
 }
 
- .filterBar span[class*="fa"] {
+.filterBar span[class*="fa"] {
     color: var(--blue);
     padding-right: 10px;
- }
+}
 
 .filterInfo{
     display: flex;
     align-items: center;
+    margin-bottom: var(--margin-size_35px);
 }
 
- .section__subtitleInfo {
+.section__subtitleInfo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,45 +227,58 @@ form {
     color: var(--blue);
     border-radius: 50%;
     border: 1px var(--grey) solid;
- }
- 
- /* Section "Hebergement à Marseille"*/
-.article-title {
-    font-family: var(--card-title-font),sans-serif;
-    font-size: var(--card-title-font-size);
-    font-weight: var(--card-title-font-weight);
 }
 
-.article-subtitle {
-    font-family: var(--card-font),sans-serif;
-    font-size: var(--card-font-size);
-    font-weight: var(--card-font-weight);
+/*Section "Hébergements et + populaires" */
+.result,
+.resultHosting, .resultPopular,
+.resultHosting__group, .resultPopular__group {
+    display: flex;
 }
 
-.footer-title {
-    font-family: var(--filter-font),sans-serif;
-    font-size: var(--footer-title-font-size);
-    font-weight: var(--footer-title-font-weight);
+.result {
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-footer {
-    font-family: var(--footer-link-font),sans-serif;
-    font-size: var(--footer-link-font-size);
-    font-weight: var(--footer-link-font-weight);
+.resultHosting,
+.resultPopular {
     background-color: var(--grey);
+    border-radius: var(--radius-size_20px);
+    padding:var(--margin-size_30px);
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:var(--margin-size_30px);
 }
 
-.affichez-plus{
-    font-family: var(--filter-font),sans-serif;
-    font-size: var(--filter-font-size);
-    font-weight: var(--filter-font-weight);
+.resultHosting__group,
+.resultPopular__group {
+    gap:var(--margin-size_30px);
 }
 
-a{
-    text-decoration: none;
-
+        /* Section "Hebergement à Marseille"*/
+.resultHosting {
+    width: var(--hosting-size_pc);
 }
 
-.hebergements_and_populaires {
-    background-color: var(--grey);
+.resultHosting__group {
+    flex-direction: row;
+}
+
+.resultHosting__group--card img {
+    height: var(--hosting-img-height-size);
+}
+
+        /* Section "Les plus populaires"*/
+.resultPopular {
+    width: var(--popular-size_pc);
+}
+
+.resultPopular__group {
+    flex-direction: column;
+}
+
+.resultPopular__group--card img {
+    height: var(--popular-img-height-size);
 }
