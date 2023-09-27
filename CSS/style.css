@@ -40,6 +40,7 @@
     --margin-size_50px: 3.125rem;
     --margin-size_35px: 2.188rem;
     --margin-size_30px: 1.875rem;
+    --margin-size_15px: 0.936rem;
     --margin-size_5px: 0.313rem;
 
     /* Radius size*/
@@ -298,8 +299,8 @@ form {
 .resultHosting__groupCard .card__detail{
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 15px;
-    margin-left: 15px;
+    margin-bottom: var(--margin-size_15px);
+    margin-left: var(--margin-size_15px);
 }
 
         /* Section "Les plus populaires"*/
@@ -319,14 +320,24 @@ form {
     padding: var(--margin-size_5px);
 }
 
-.resultPopular__groupCard .card__detail {
-    width: 66%;
-    height: 100%;
-}
-
 .resultPopular__groupCard img {
     height: var(--popular-img-height-size);
     width: 34%;
     border-radius: var(--radius-size_20px) 0 0 var(--radius-size_20px);
     object-fit: cover;
 }
+
+.resultPopular__groupCard .card__detail {
+    width: 66%;
+    height: 100%;
+    justify-content: space-between;
+    padding-left: var(--margin-size_15px);
+    padding-top: var(--margin-size_15px);
+    padding-bottom: var(--margin-size_5px);
+    box-sizing: border-box;
+}
+
+.resultPopular__groupCard .card__detail h3 {
+    margin-bottom: var(--margin-size_5px);
+}
+
