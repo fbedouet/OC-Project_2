@@ -40,6 +40,7 @@
     --margin-size_50px: 3.125rem;
     --margin-size_35px: 2.188rem;
     --margin-size_30px: 1.875rem;
+    --margin-size_20px: 1.25rem;
     --margin-size_15px: 0.936rem;
     --margin-size_5px: 0.313rem;
 
@@ -53,6 +54,7 @@
     /* Picture size */
     --hosting-img-height-size: 124px;
     --popular-img-height-size: 134px;
+    --activity-img-height-size: 380px;
 }
 
 /* Initialization */
@@ -245,6 +247,7 @@ form {
 .result {
     flex-direction: row;
     justify-content: space-between;
+    margin: var(--margin-size_30px) 0;
 }
 
 .resultHosting,
@@ -341,3 +344,36 @@ form {
     margin-bottom: var(--margin-size_5px);
 }
 
+/* Section "Activités" */
+.activity,
+.activity__group,
+.activity__groupCard {
+    display: flex;
+}
+
+.activity {
+    flex-direction: column;
+    gap: var(--margin-size_30px);
+    padding: var(--margin-size_30px);
+}
+
+.activity__group {
+    gap: var(--margin-size_30px);
+}
+
+.activity__groupCard{
+    width: 25%;
+    flex-direction: column;
+}
+
+.activity__groupCard img {
+    height: var(--activity-img-height-size);
+    width: 100%;
+    border-radius: var(--radius-size_20px) var(--radius-size_20px) 0 0;
+}
+
+.activity__groupCard h3 {
+   padding: var(--margin-size_20px);
+   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.322);
+   border-radius: 0 0 var(--radius-size_20px) var(--radius-size_20px);
+}
