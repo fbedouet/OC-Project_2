@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Booki</title>
         <link rel="stylesheet" href="CSS/style.css">
         <script src="https://kit.fontawesome.com/1173bca6e6.js" crossorigin="anonymous"></script> <!--Install font awesome-->
@@ -27,36 +28,38 @@
                     <button class="filterSearch__buttonMap"><i class="fa-solid fa-location-dot"></i></button>
                     <input type="search" id="site-search"  name="q" class="filterSearch__textInput">
                     <button class="filterSearch__button">Rechercher</button> <!--Version desktop du bouton-->
-                    <button class="filterSearch__button">
+                    <button class="filterSearch__buttonMob">
                         <i class="fa-solid fa-magnifying-glass"></i><!--Version mobile du bouton-->
                     </button> 
                 </form>
                 <div class="filterBar"> <!--Filtres-->
                     <span>Filtres</span>
-                    <a href="#">
-                        <div class="filterBar__navItem">
-                            <span class="fa-solid fa-money-bill-wave"></span>
-                            <span>Économique</span> 
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="filterBar__navItem">
-                            <span class="fa-solid fa-person"></span>
-                            <span>Familial</span> 
-                        </div>
-                    </a> 
-                    <a href="#">
-                        <div class="filterBar__navItem">
-                            <span class="fa-solid fa-heart"></span>
-                            <span>Romantique</span> 
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="filterBar__navItem">
-                            <span class="fa-solid fa-fire"></span>
-                            <span>Nos pépites</span> 
-                        </div>
-                    </a>
+                    <div class="filterBar__nav">
+                        <a href="#">
+                            <div class="filterBar__navItem">
+                                <span class="fa-solid fa-money-bill-wave"></span>
+                                <span>Économique</span> 
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="filterBar__navItem">
+                                <span class="fa-solid fa-person"></span>
+                                <span>Familial</span> 
+                            </div>
+                        </a> 
+                        <a href="#">
+                            <div class="filterBar__navItem">
+                                <span class="fa-solid fa-heart"></span>
+                                <span>Romantique</span> 
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="filterBar__navItem">
+                                <span class="fa-solid fa-fire"></span>
+                                <span>Nos pépites</span> 
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <p class="filterInfo"> 
                     <span class="section__subtitleInfo"><i class="fa-solid fa-info fa-2xs"></i></span>
@@ -74,11 +77,11 @@
                                 <h3>Hôtel du port</h3>
                                 <p>Nuit à partir de 52<strong>€</strong></p>
                                 <div class="card__detailRating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -88,11 +91,11 @@
                                 <h3>Hôtel Chez Amina</h3>
                                 <p>Nuit à partir de 96<strong>€</strong></p>
                                 <div class="card__detailRating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -102,11 +105,11 @@
                                 <h3>Hôtel Les mouettes</h3>
                                 <p>Nuit à partir de 76<strong>€</strong></p>
                                 <div class="cardDetail__rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>                                    
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>                                    
                                 </div>
                             </div>
                         </div>
@@ -119,11 +122,11 @@
                                 <h3>Hôtel du port</h3>
                                 <p>Nuit à partir de 52<strong>€</strong></p>
                                 <div class="card__detailRating">
-                                    <span class="fa-solid fa-star"></span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -133,11 +136,11 @@
                                 <h3>Hôtel Chez Amina</h3>
                                 <p>Nuit à partir de 96<strong>€</strong></p>
                                 <div class="hosting__cardRating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -147,11 +150,11 @@
                                 <h3>Hôtel Les mouettes</h3>
                                 <p>Nuit à partir de 76<strong>€</strong></p>
                                 <div class="cardDetail__rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -173,11 +176,11 @@
                                     <p>Nuit à partir de 25<strong>€</strong></p>
                                 </div>
                                 <div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -189,11 +192,11 @@
                                     <p>Nuit à partir de 71<strong>€</strong></p>
                                 </div>
                                 <div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -205,11 +208,11 @@
                                     <p>Nuit à partir de 68<strong>€</strong></p>
                                 </div>
                                 <div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star"></i>
+                                    <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
                         </div>
