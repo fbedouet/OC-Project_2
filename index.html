@@ -13,11 +13,11 @@
     <body>
         <header class="appBar"> <!--NavBar-->
             <div class="appBar__logo">    
-                <img src="images/logo/Logo.svg" alt="Logo" class="appBar__logoIcon">
+                <img src="images/logo/Logo.svg" alt="Logo">
             </div>
             <nav class="appBar__nav">
-                    <a href="#" class="appBar__navItem">Hébergements</a>
-                    <a href="#" class="appBar__navItem">Activités</a>
+                    <a href="#" class="appBar__navHosting">Hébergements</a>
+                    <a href="#" class="appBar__navActivity">Activités</a>
             </nav>
         </header>
         <main>
@@ -25,7 +25,7 @@
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre-ville ou en pleine nature</p>
                 <form> <!--Formulaire de recherche-->
-                    <button class="filterSearch__buttonMap"><i class="fa-solid fa-location-dot"></i></button>
+                    <button class="filterSearch__buttonMap"><i class="fa-lg fa-solid fa-location-dot"></i></button>
                     <input type="search" id="site-search"  name="q" class="filterSearch__textInput">
                     <button class="filterSearch__button">Rechercher</button> <!--Version desktop du bouton-->
                     <button class="filterSearch__buttonMob">
@@ -222,24 +222,24 @@
 
             <section class="activity"> <!--Section "Activités à Marseille"-->
                 <h2>Activités à Marseille</h2>
-                <div class="activity__group">
-                    <article class="activity__groupCard">
+                <aticle class="activity__group">
+                    <div class="activity__groupCard">
                         <img src="images/activites/reno-laithienne.jpg" alt="Port de plaisance dans un centre ville">
                         <h3 class="article-title">Vieux-Port</h3>
-                    </article>
-                    <article class="activity__groupCard">
+                    </div>
+                    <div class="activity__groupCard">
                         <img src="images/activites/paul-hermann.jpg" alt="Fort sur une falaise rocheuse">
                         <h3 class="article-title">Fort de Pomègues</h3>
-                    </article class="activity__groupCard">
-                    <article class="activity__groupCard">
+                    </div>
+                    <div class="activity__groupCard">
                         <img src="images/activites/kilyan-sockalingum.jpg" alt="Vue mer en haut d'une calanque">
                         <h3 class="article-title">Parc national des Calanques</h3>
-                    </article>
-                    <article class="activity__groupCard">
+                    </div>
+                    <div class="activity__groupCard">
                         <img src="images/activites/florian-wehde.jpg" alt="Vue de la basilique du centre ville">
                         <h3 class="article-title">Notre-Dame-de-la-Garde</h3>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </section>
 
         </main>

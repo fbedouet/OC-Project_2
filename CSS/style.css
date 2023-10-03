@@ -51,10 +51,17 @@
     --hosting-size_pc:65%;
     --popular-size_pc:32%;
 
+    /*General size*/
+    --max-width-size:1440px;
+    --weight-uderscore-nav_items: 2px;
+    --general-shadows: 0px 3px 15px rgba(0, 0, 0, 0.1);
+
     /* Picture size */
     --hosting-img-height-size: 124px;
     --popular-img-height-size: 134px;
     --activity-img-height-size: 380px;
+    --logo-svg-width-size: 3.819rem;
+    --logo-svg-height-size: 1.188rem;
 }
 
 /* Initialization */
@@ -76,9 +83,8 @@ body{
 main,
 footer,
 header {
-    max-width: 1440px;
+    max-width: var(--max-width-size);
     width: 100%;
-    /*margin: 0 var(--margin-size_50px);*/
 }
 
 /* General title and subitle */
@@ -104,11 +110,11 @@ header {
     font-weight: var(--card-font-weight);
 }
 
-.fa-solid {
+.card__detail .fa-solid {
     color: var(--blue);
 }
 
-.neutral-star {
+.card__detail .neutral-star {
     color: var(--grey);
 }
 
@@ -143,18 +149,18 @@ footer h2 {
    margin: auto 0;
 }
 
-.appBar__logoIcon {
-    height: 1.188rem;
-    width: 3.819rem;
+.appBar__logo img {
+    height: var(--logo-svg-height-size);
+    width: var(--logo-svg-width-size);
 }
 
 .appBar__nav {
     align-items: flex-start;
     height: 2.188rem;
-    width: 251px;
+    width: 15.688rem;/*251px*/
 }
 
-.appBar__navItem {
+.appBar a {
     height: 2.188rem;
     font-family: var(--nav-font),sans-serif;
     font-size: var(--nav-font-size);
@@ -163,11 +169,11 @@ footer h2 {
     padding-top: 10px;
 }
 
-.appBar__navItem:hover {
-    border-top: 2px #0065FC solid;
+.appBar a:hover {
+    border-top: var(--weight-uderscore-nav_items) #0065FC solid;
 }
 
-.appBar__navItem:visited{
+.appBar a:visited{
     color: var(--blue);
 }
 
@@ -178,15 +184,20 @@ footer h2 {
         /* Search form */
 
 .filterSearch__button,
-.filterSearch__buttonMob {
+.filterSearch__buttonMob,
+.filterSearch__textInput {
     padding: 15px;
-    background:var(--blue);
-    color: white;
     font-weight: 700;
     font-family: var(--body-font);
+    font-size: 18px;
+}
+
+.filterSearch__button,
+.filterSearch__buttonMob {
+    color: white;
+    background:var(--blue);
     border-radius: 0px 15px 15px 0px;
     border: 2px var(--blue) solid;
-    font-size: 18px;
 }
 
 .filterSearch__buttonMap {
@@ -196,8 +207,14 @@ footer h2 {
     border-radius: 15px 0px 0px 15px;
 }
 
+.filterSearch__buttonMob {
+    border-radius: 15px 15px 15px 15px;
+    position: relative;
+    right:30px;
+    box-shadow: var(--general-shadows);
+}
+
 .filterSearch__textInput {
-    padding: 15px;
     border:none;
     border-top: 2px var(--grey) solid;
     border-bottom: 2px var(--grey) solid;
@@ -294,6 +311,7 @@ form {
 .resultPopular__groupCard {
     background-color: var(--card-background);
     border-radius: var(--radius-size_20px);
+    filter: drop-shadow(var(--general-shadows));
 }
 
 .card__detail {
@@ -388,6 +406,7 @@ form {
 .activity__groupCard{
     width: 25%;
     flex-direction: column;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .activity__groupCard img {
@@ -396,10 +415,11 @@ form {
     border-radius: var(--radius-size_20px) var(--radius-size_20px) 0 0;
 }
 
+
 .activity__groupCard h3 {
    padding: var(--margin-size_20px);
-   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.322);
    border-radius: 0 0 var(--radius-size_20px) var(--radius-size_20px);
+   background-color: white;
 }
 
 footer,footer div {
@@ -465,7 +485,99 @@ footer div {
 }
 
 @media (max-width: 767.98px) {
+    body {
+        padding: 0;
+    }
+    
+    .result {
+        flex-direction: column-reverse;
+        gap:15px;    
+    }
+
+    .resultHosting,
+    .resultPopular {
+        border-radius: 0;
+    }
+
+    .resultHosting {
+        background-color: white;
+    }
+    
+    .resultHosting__group {
+        flex-direction: column;
+    }
+    
+    .resultHosting__groupCard {
+        width: 100%;
+    }
+    
+    .resultPopular__group{
+        flex-direction: column;
+    }
+    
+    .resultPopular__groupCard {
+        width: 100%;
+    }
+    
+    .activity {
+        margin-top: 25px;
+        padding-bottom: 55px;
+    }
+
+    .activity__group {
+        flex-direction: column;
+    }
+    
+    .activity__groupCard {
+        width: 100%;
+    }
+    
+    .activity__groupCard img {
+        height: 141px;
+        object-fit: cover;
+    }
+
+    .filter {
+        padding: 0 20px;
+    }
+
+    .appBar {
+        flex-direction: column;
+    }
+
+    .appBar__nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .appBar a {
+        width: 50%;
+        padding:0;  
+    }
+
+    .appBar a:hover {
+        border-bottom: 2px #0065FC solid;
+        border-top: none;
+    } 
+
+    .appBar {
+        height: 115px;
+        text-align: center;
+    }
+
     .filterSearch__button{
         display:none;
+    }
+    
+    .filterBar__navItem {
+        font-size: 0.875rem;
+        width: 136px;
+    }
+    
+    footer {
+        flex-direction: column;
+    }
+    footer div {
+        width: 100%;
     }
 }
