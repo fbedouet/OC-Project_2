@@ -54,7 +54,7 @@
     /*General size*/
     --max-width-size:1440px;
     --weight-uderscore-nav_items: 2px;
-    --general-shadows: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    
 
     /* Picture size */
     --hosting-img-height-size: 124px;
@@ -62,6 +62,10 @@
     --activity-img-height-size: 380px;
     --logo-svg-width-size: 3.819rem;
     --logo-svg-height-size: 1.188rem;
+
+    /*Shadows*/
+    --general-shadows: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    --button-mob-shadows: 0px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Initialization */
@@ -71,6 +75,7 @@
 
 a{
     text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 body{
@@ -165,15 +170,11 @@ footer h2 {
     font-family: var(--nav-font),sans-serif;
     font-size: var(--nav-font-size);
     font-weight: var(--nav-font-size);
-    color: var(--blue);
     padding-top: 10px;
 }
 
 .appBar a:hover {
     border-top: var(--weight-uderscore-nav_items) #0065FC solid;
-}
-
-.appBar a:visited{
     color: var(--blue);
 }
 
@@ -184,7 +185,6 @@ footer h2 {
         /* Search form */
 
 .filterSearch__button,
-.filterSearch__buttonMob,
 .filterSearch__textInput {
     padding: 15px;
     font-weight: 700;
@@ -192,8 +192,7 @@ footer h2 {
     font-size: 18px;
 }
 
-.filterSearch__button,
-.filterSearch__buttonMob {
+.filterSearch__button {
     color: white;
     background:var(--blue);
     border-radius: 0px 15px 15px 0px;
@@ -205,13 +204,6 @@ footer h2 {
     border: none;
     background-color: var(--grey);
     border-radius: 15px 0px 0px 15px;
-}
-
-.filterSearch__buttonMob {
-    border-radius: 15px 15px 15px 15px;
-    position: relative;
-    right:30px;
-    box-shadow: var(--general-shadows);
 }
 
 .filterSearch__textInput {
@@ -227,6 +219,7 @@ form {
 
         /* Filter Bar */
 .filterBar,
+.filterBar__group,
 .filterBar__nav {
     display: flex;
 }
@@ -242,6 +235,10 @@ form {
 .filterBar__nav {
     gap:10px;
     margin-left: 10px;
+}
+
+.filterBar__group {
+    gap:10px;
 }
 
 .filterBar__navItem {
@@ -437,6 +434,13 @@ footer div {
     padding: 20px;
 }
 
+    /* Small devices (desktop and tablets, more than 768px) */
+@media (min-width: 767.98px) {
+    .filterSearch__button i{
+        display:none;
+    }
+}
+
 /* Media queries*/
     /* Medium devices (tablets, less than 1025px) */
 @media (max-width: 1024px) {
@@ -448,7 +452,7 @@ footer div {
 
     .filterBar__nav {
         margin-left: 0;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
     }
 
     .result {
@@ -477,16 +481,15 @@ footer div {
     }
 
 }
-    /* Small devices (phones, less than 768px) */
-@media (min-width: 767.98px) {
-    .filterSearch__buttonMob{
-        display:none;
-    }
-}
 
+   /* Small devices (mobil, less than 768px) */
 @media (max-width: 767.98px) {
     body {
         padding: 0;
+    }
+
+    main{
+        padding-top: 115px;
     }
     
     .result {
@@ -541,9 +544,14 @@ footer div {
         padding: 0 20px;
     }
 
-    .appBar {
-        flex-direction: column;
+    /*Proposition d'amélioration
+    .filter h1, .filter p {
+        text-align: center;
     }
+
+    form , .filterInfo {
+        justify-content: center;
+    }*/
 
     .appBar__nav {
         width: 100%;
@@ -555,23 +563,52 @@ footer div {
         padding:0;  
     }
 
+
+
+    .appBar {
+        flex-direction: column;
+        height: 115px;
+        text-align: center;
+        position:fixed;
+        z-index: 1;
+        background-color: white;
+        border-bottom: 2px var(--light-blue) solid;
+    }
+
     .appBar a:hover {
         border-bottom: 2px #0065FC solid;
         border-top: none;
     } 
 
-    .appBar {
-        height: 115px;
-        text-align: center;
-    }
-
-    .filterSearch__button{
+    .filterSearch__button span{
         display:none;
     }
+
+    .filterSearch__button {
+    border-radius: 15px 15px 15px 15px;
+    position: relative;
+    right:30px;
+    box-shadow: var(--button-mob-shadows);
+}
     
+    .filterBar__navItem a {
+        padding: 10px 0;
+        padding-left: 15%; 
+        width: 100%;
+    }
+
     .filterBar__navItem {
         font-size: 0.875rem;
-        width: 136px;
+    }
+
+    .filterBar__nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filterBar__group {
+        gap:10px;
+        width: 100%;
     }
     
     footer {

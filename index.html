@@ -16,8 +16,8 @@
                 <img src="images/logo/Logo.svg" alt="Logo">
             </div>
             <nav class="appBar__nav">
-                    <a href="#" class="appBar__navHosting">Hébergements</a>
-                    <a href="#" class="appBar__navActivity">Activités</a>
+                    <a href="#anchorHosting" class="appBar__navHosting">Hébergements</a>
+                    <a href="#anchorActivity" class="appBar__navActivity">Activités</a>
             </nav>
         </header>
         <main>
@@ -27,14 +27,12 @@
                 <form> <!--Formulaire de recherche-->
                     <button class="filterSearch__buttonMap"><i class="fa-lg fa-solid fa-location-dot"></i></button>
                     <input type="search" id="site-search"  name="q" class="filterSearch__textInput">
-                    <button class="filterSearch__button">Rechercher</button> <!--Version desktop du bouton-->
-                    <button class="filterSearch__buttonMob">
-                        <i class="fa-solid fa-magnifying-glass"></i><!--Version mobile du bouton-->
-                    </button> 
+                    <button class="filterSearch__button"><Span>Rechercher</Span><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <div class="filterBar"> <!--Filtres-->
                     <span>Filtres</span>
                     <div class="filterBar__nav">
+                        <div class="filterBar__group">
                         <a href="#">
                             <div class="filterBar__navItem">
                                 <span class="fa-solid fa-money-bill-wave"></span>
@@ -47,6 +45,8 @@
                                 <span>Familial</span> 
                             </div>
                         </a> 
+                        </div>
+                        <div class="filterBar__group">
                         <a href="#">
                             <div class="filterBar__navItem">
                                 <span class="fa-solid fa-heart"></span>
@@ -59,19 +59,20 @@
                                 <span>Nos pépites</span> 
                             </div>
                         </a>
+                        </div>
                     </div>
                 </div>
                 <p class="filterInfo"> 
                     <span class="section__subtitleInfo"><i class="fa-solid fa-info fa-2xs"></i></span>
-                    <span>Plus de 500 logements sont disponibles dans cette ville</span>
+                    <span>&nbsp Plus de 500 logements sont disponibles dans cette ville</span>
                 </p>
             </section>
             <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
             <section class="result"> <!--Group "Hébergements" & "+Populaires"-->
                 <article class="resultHosting"> <!--Section "Hébergements"-->
-                    <h2>Hébergements à Marseille</h2>
+                    <h2 id="anchorHosting">Hébergements à Marseille</h2>
                     <div class="resultHosting__group">
-                        <div class="resultHosting__groupCard">
+                        <a href="#" class="resultHosting__groupCard">
                             <img src="images/hebergements/fred-kleber.jpg" alt="Chambre avec un lit double et un lit simple">
                             <div class="card__detail">
                                 <h3>Hôtel du port</h3>
@@ -84,8 +85,8 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="resultHosting__groupCard">
+                        </a>
+                        <a href="#" class="resultHosting__groupCard">
                             <img src="images/hebergements/febrian-zakaria.jpg" alt="Chambre avec deux lits doubles et un bureau">
                             <div class="card__detail">
                                 <h3>Hôtel Chez Amina</h3>
@@ -98,8 +99,8 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="resultHosting__groupCard">
+                        </a>
+                        <a href="#" class="resultHosting__groupCard">
                             <img src="images/hebergements/reisetopia.jpg" alt="Chambre avec lit simple devant armoire avec miroir">
                             <div class="card__detail">
                                 <h3>Hôtel Les mouettes</h3>
@@ -112,15 +113,15 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>                                    
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="resultHosting__group">
-                        <div class="resultHosting__groupCard">
-                            <img src="images/hebergements/fred-kleber.jpg" alt="Chambre avec un lit double et un lit simple">
+                        <a href="#" class="resultHosting__groupCard">
+                            <img src="images/hebergements/annie-spratt.jpg" alt="Chambre avec un lit double avec un tableau imagé mer turquoise">
                             <div class="card__detail">
-                                <h3>Hôtel du port</h3>
-                                <p>Nuit à partir de 52<strong>€</strong></p>
+                                <h3>Hôtel de la mer</h3>
+                                <p>Nuit à partir de 46<strong>€</strong></p>
                                 <div class="card__detailRating">
                                     <i class="fa-xs fa-solid fa-star"></i>
                                     <i class="fa-xs fa-solid fa-star"></i>
@@ -129,12 +130,12 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="resultHosting__groupCard">
-                            <img src="images/hebergements/febrian-zakaria.jpg" alt="Chambre avec deux lits doubles et un bureau">
+                        </a>
+                        <a href="#" class="resultHosting__groupCard">
+                            <img src="images/hebergements/marcus-loke.jpg" alt="Chambre avec deux lits simples superposé avec deux fenetres vue centre ville">
                             <div class="card__detail">
-                                <h3>Hôtel Chez Amina</h3>
-                                <p>Nuit à partir de 96<strong>€</strong></p>
+                                <h3>Auberge La cannebière</h3>
+                                <p>Nuit à partir de 25<strong>€</strong></p>
                                 <div class="hosting__cardRating">
                                     <i class="fa-xs fa-solid fa-star"></i>
                                     <i class="fa-xs fa-solid fa-star"></i>
@@ -143,12 +144,12 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="resultHosting__groupCard">
-                            <img src="images/hebergements/reisetopia.jpg" alt="Chambre avec lit simple devant armoire avec miroir">
+                        </a>
+                        <a href="#" class="resultHosting__groupCard">
+                            <img src="images/hebergements/nicate-lee.jpg" alt="Dortoir ambience chalet avec deux lits superposés en bois">
                             <div class="card__detail">
-                                <h3>Hôtel Les mouettes</h3>
-                                <p>Nuit à partir de 76<strong>€</strong></p>
+                                <h3>Auberge Le Panier</h3>
+                                <p>Nuit à partir de 23<strong>€</strong></p>
                                 <div class="cardDetail__rating">
                                     <i class="fa-xs fa-solid fa-star"></i>
                                     <i class="fa-xs fa-solid fa-star"></i>
@@ -157,7 +158,7 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <a href="#">Afficher plus</a>
                 </article>
@@ -165,10 +166,10 @@
                 <article class="resultPopular"> <!--Section "+Populaires"-->
                     <div class="resultPopular__title">
                         <h2>Les plus populaires</h2>
-                        <i class="fa-solid fa-chart-line"></i>
+                        <a href="#" class="fa-solid fa-chart-line"></a>
                     </div>
                     <div class="resultPopular__group">
-                        <div class="resultPopular__groupCard">
+                        <a href="#" class="resultPopular__groupCard">
                             <img src="images/hebergements/emile-guillemot.jpg" alt="Chambre avec lit double devant miroir avec lustre au plafond">
                             <div class="card__detail">
                                 <div>    
@@ -183,8 +184,8 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="resultPopular__groupCard">
+                        </a>
+                        <a href="#" class="resultPopular__groupCard">
                             <img src="images/hebergements/aw-creative.jpg" alt="Lit double dans une suite moderne">
                             <div class="card__detail">
                                 <div>
@@ -199,8 +200,8 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="resultPopular__groupCard">
+                        </a>
+                        <a href="#" class="resultPopular__groupCard">
                             <img src="images/hebergements/febrian-zakaria2.jpg" alt="Chambre avec un lit double">
                             <div class="card__detail">
                                 <div>
@@ -215,30 +216,30 @@
                                     <i class="fa-xs fa-solid fa-star neutral-star"></i>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </article>
             </section>
 
             <section class="activity"> <!--Section "Activités à Marseille"-->
-                <h2>Activités à Marseille</h2>
+                <h2 id="anchorActivity">Activités à Marseille</h2>
                 <aticle class="activity__group">
-                    <div class="activity__groupCard">
+                    <a href="#" class="activity__groupCard">
                         <img src="images/activites/reno-laithienne.jpg" alt="Port de plaisance dans un centre ville">
                         <h3 class="article-title">Vieux-Port</h3>
-                    </div>
-                    <div class="activity__groupCard">
+                    </a>
+                    <a href="#" class="activity__groupCard">
                         <img src="images/activites/paul-hermann.jpg" alt="Fort sur une falaise rocheuse">
                         <h3 class="article-title">Fort de Pomègues</h3>
-                    </div>
-                    <div class="activity__groupCard">
+                    </a>
+                    <a href="#" class="activity__groupCard">
                         <img src="images/activites/kilyan-sockalingum.jpg" alt="Vue mer en haut d'une calanque">
                         <h3 class="article-title">Parc national des Calanques</h3>
-                    </div>
-                    <div class="activity__groupCard">
+                    </a>
+                    <a href="#" class="activity__groupCard">
                         <img src="images/activites/florian-wehde.jpg" alt="Vue de la basilique du centre ville">
                         <h3 class="article-title">Notre-Dame-de-la-Garde</h3>
-                    </div>
+                    </a>
                 </article>
             </section>
 
