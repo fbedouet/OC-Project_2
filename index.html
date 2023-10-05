@@ -32,29 +32,21 @@
                 <div class="filterBar"> <!--Filtres-->
                     <span>Filtres</span>
                     <div class="filterBar__nav">
-                        <a href="#">
-                            <div class="filterBar__navItem">
+                        <a href="#" class="filterBar__navItem">
                                 <span class="fa-solid fa-money-bill-wave"></span>
                                 <span>Économique</span> 
-                            </div>
                         </a>
-                        <a href="#">
-                            <div class="filterBar__navItem">
+                        <a href="#" class="filterBar__navItem">
                                 <span class="fa-solid fa-person"></span>
                                 <span>Familial</span> 
-                            </div>
                         </a> 
-                        <a href="#">
-                            <div class="filterBar__navItem">
+                        <a href="#" class="filterBar__navItem">
                                 <span class="fa-solid fa-heart"></span>
                                 <span>Romantique</span> 
-                            </div>
                         </a>
-                        <a href="#">
-                            <div class="filterBar__navItem">
+                        <a href="#" class="filterBar__navItem">
                                 <span class="fa-solid fa-fire"></span>
-                                <span>Nos pépites</span> 
-                            </div>
+                                <span>Nos pépites</span>
                         </a>
                     </div>
                 </div>
@@ -64,10 +56,10 @@
                 </p>
             </section>
             <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-            <section class="result"> <!--Group "Hébergements" & "+Populaires"-->
-                <article class="resultHosting"> <!--Section "Hébergements"-->
+            <div class="result"> <!--Group "Hébergements" & "+Populaires"-->
+                <section class="resultHosting"> <!--Section "Hébergements"-->
                     <h2 id="anchorHosting">Hébergements à Marseille</h2>
-                    <div class="resultHosting__group">
+                    <article class="resultHosting__group">
                         <a href="#" class="resultHosting__groupCard">
                             <img src="images/hebergements/fred-kleber.jpg" alt="Chambre avec un lit double et un lit simple">
                             <div class="card__detail">
@@ -110,14 +102,14 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </article>
 
-                    <div class="resultHosting__group">
+                    <article class="resultHosting__group">
                         <a href="#" class="resultHosting__groupCard">
-                            <img src="images/hebergements/fred-kleber.jpg" alt="Chambre avec un lit double et un lit simple">
+                            <img src="images/hebergements/annie-spratt.jpg" alt="Chambre avec un lit double avec un tableau imagé mer turquoise">
                             <div class="card__detail">
-                                <h3>Hôtel du port</h3>
-                                <p>Nuit à partir de 52<strong>€</strong></p>
+                                <h3>Hôtel de la mer</h3>
+                                <p>Nuit à partir de 46<strong>€</strong></p>
                                 <div class="card__detailRating">
                                     <i class="fa-xs fa-solid fa-star"></i>
                                     <i class="fa-xs fa-solid fa-star"></i>
@@ -128,10 +120,10 @@
                             </div>
                         </a>
                         <a href="#" class="resultHosting__groupCard">
-                            <img src="images/hebergements/febrian-zakaria.jpg" alt="Chambre avec deux lits doubles et un bureau">
+                            <img src="images/hebergements/marcus-loke.jpg" alt="Chambre avec deux lits simples superposé avec deux fenetres vue centre ville">
                             <div class="card__detail">
-                                <h3>Hôtel Chez Amina</h3>
-                                <p>Nuit à partir de 96<strong>€</strong></p>
+                                <h3>Auberge La cannebière</h3>
+                                <p>Nuit à partir de 25<strong>€</strong></p>
                                 <div class="hosting__cardRating">
                                     <i class="fa-xs fa-solid fa-star"></i>
                                     <i class="fa-xs fa-solid fa-star"></i>
@@ -142,10 +134,10 @@
                             </div>
                         </a>
                         <a href="#" class="resultHosting__groupCard">
-                            <img src="images/hebergements/reisetopia.jpg" alt="Chambre avec lit simple devant armoire avec miroir">
+                            <img src="images/hebergements/nicate-lee.jpg" alt="Dortoir ambience chalet avec deux lits superposés en bois">
                             <div class="card__detail">
-                                <h3>Hôtel Les mouettes</h3>
-                                <p>Nuit à partir de 76<strong>€</strong></p>
+                                <h3>Auberge Le Panier</h3>
+                                <p>Nuit à partir de 23<strong>€</strong></p>
                                 <div class="cardDetail__rating">
                                     <i class="fa-xs fa-solid fa-star"></i>
                                     <i class="fa-xs fa-solid fa-star"></i>
@@ -155,11 +147,11 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </article>
                     <a href="#">Afficher plus</a>
-                </article>
+                </section>
 
-                <article class="resultPopular"> <!--Section "+Populaires"-->
+                <section class="resultPopular"> <!--Section "+Populaires"-->
                     <div class="resultPopular__title">
                         <h2>Les plus populaires</h2>
                         <i class="fa-solid fa-chart-line"></i>
@@ -214,12 +206,12 @@
                             </div>
                         </a>
                     </div>
-                </article>
-            </section>
+                </section>
+            </div>
 
             <section class="activity"> <!--Section "Activités à Marseille"-->
                 <h2 id="anchorActivity">Activités à Marseille</h2>
-                <aticle class="activity__group">
+                <article class="activity__group">
                     <a href="#" class="activity__groupCard">
                         <img src="images/activites/reno-laithienne.jpg" alt="Port de plaisance dans un centre ville">
                         <h3 class="article-title">Vieux-Port</h3>

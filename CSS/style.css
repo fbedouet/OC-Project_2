@@ -165,22 +165,21 @@ footer h2 {
     width: 15.688rem;/*251px*/
 }
 
+
 .appBar a {
     height: 2.188rem;
     font-family: var(--nav-font),sans-serif;
     font-size: var(--nav-font-size);
-    font-weight: var(--nav-font-size);
-    color: var(--blue);
+    font-weight: var(--nav-font-weight);
     padding-top: 10px;
 }
 
 .appBar a:hover {
     border-top: var(--weight-uderscore-nav_items) #0065FC solid;
-}
-
-.appBar a:visited{
     color: var(--blue);
 }
+
+
 
 /* Section "Trouver votre hebergement" */
 .filter {
@@ -241,7 +240,7 @@ form {
 }
 
 .filterBar__navItem {
-    padding: 10px;
+    padding: 14px 20px;
     border: 2px var(--grey) solid;
     border-radius: 25px;
     color: var(--body-font-color);
@@ -260,6 +259,7 @@ form {
     display: flex;
     align-items: center;
     margin-bottom: var(--margin-size_35px);
+    gap:10px
 }
 
 .section__subtitleInfo {
@@ -537,6 +537,10 @@ footer div {
 
     .filterSearch__textInput {
         width: 75%;
+    }
+
+    .filterBar__nav {
+        justify-content: center;
     }
     
     .filterBar__navItem {
