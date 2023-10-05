@@ -62,6 +62,10 @@
     --activity-img-height-size: 380px;
     --logo-svg-width-size: 3.819rem;
     --logo-svg-height-size: 1.188rem;
+
+    /*Shadows*/
+    --general-shadows: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    --button-mob-shadows: 0px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Initialization */
@@ -71,6 +75,7 @@
 
 a{
     text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 body{
@@ -184,7 +189,6 @@ footer h2 {
         /* Search form */
 
 .filterSearch__button,
-.filterSearch__buttonMob,
 .filterSearch__textInput {
     padding: 15px;
     font-weight: 700;
@@ -192,8 +196,7 @@ footer h2 {
     font-size: 18px;
 }
 
-.filterSearch__button,
-.filterSearch__buttonMob {
+.filterSearch__button {
     color: white;
     background:var(--blue);
     border-radius: 0px 15px 15px 0px;
@@ -205,13 +208,6 @@ footer h2 {
     border: none;
     background-color: var(--grey);
     border-radius: 15px 0px 0px 15px;
-}
-
-.filterSearch__buttonMob {
-    border-radius: 15px 15px 15px 15px;
-    position: relative;
-    right:30px;
-    box-shadow: var(--general-shadows);
 }
 
 .filterSearch__textInput {
@@ -435,6 +431,14 @@ footer div {
     width: 33%;
     gap:20px;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+   /* large anf medium devices (desktop and tablets, more than 768px) */
+@media (min-width: 767.98px) {
+    .filterSearch__button i {
+        display:none;
+    }
 }
 
 /* Media queries*/
@@ -477,72 +481,27 @@ footer div {
     }
 
 }
-    /* Small devices (phones, less than 768px) */
-@media (min-width: 767.98px) {
-    .filterSearch__buttonMob{
-        display:none;
-    }
-}
 
+    /* Small devices (mobil, less than 768px) */
 @media (max-width: 767.98px) {
+        /* mqMob__Initialization */
     body {
         padding: 0;
     }
-    
-    .result {
-        flex-direction: column-reverse;
-        gap:15px;    
+
+    form {
+        max-width: 335px;
+        position:relative;
     }
 
-    .resultHosting,
-    .resultPopular {
-        border-radius: 0;
-    }
+        /* mqMob__General title and subitle */
 
-    .resultHosting {
-        background-color: white;
-    }
-    
-    .resultHosting__group {
+        /* mqMob__Navigation Bar */
+   .appBar {
         flex-direction: column;
-    }
-    
-    .resultHosting__groupCard {
-        width: 100%;
-    }
-    
-    .resultPopular__group{
-        flex-direction: column;
-    }
-    
-    .resultPopular__groupCard {
-        width: 100%;
-    }
-    
-    .activity {
-        margin-top: 25px;
-        padding-bottom: 55px;
-    }
-
-    .activity__group {
-        flex-direction: column;
-    }
-    
-    .activity__groupCard {
-        width: 100%;
-    }
-    
-    .activity__groupCard img {
-        height: 141px;
-        object-fit: cover;
-    }
-
-    .filter {
-        padding: 0 20px;
-    }
-
-    .appBar {
-        flex-direction: column;
+        height: 115px;
+        text-align: center;
+        border-bottom: 2px var(--light-blue) solid;
     }
 
     .appBar__nav {
@@ -560,13 +519,24 @@ footer div {
         border-top: none;
     } 
 
-    .appBar {
-        height: 115px;
-        text-align: center;
+        /* mqMob__Section "Trouver votre hebergement" */
+   .filter {
+        padding: 0 20px;
     }
 
-    .filterSearch__button{
+    .filterSearch__button span{
         display:none;
+    }
+
+    .filterSearch__button {
+        border-radius: 15px 15px 15px 15px;
+        position: absolute;
+        right:0;
+        box-shadow: var(--button-mob-shadows);
+    }
+
+    .filterSearch__textInput {
+        width: 75%;
     }
     
     .filterBar__navItem {
@@ -574,7 +544,60 @@ footer div {
         width: 136px;
     }
     
-    footer {
+        /*mqMob__Section "Hébergements et + populaires" */
+   .result {
+        flex-direction: column-reverse;
+        gap:15px;    
+    }
+
+    .resultHosting,
+    .resultPopular {
+        border-radius: 0;
+    }
+
+        /* mqMob__Section "Hebergement à Marseille"*/
+   .resultHosting {
+        background-color: white;
+    }
+    
+    .resultHosting__group {
+        flex-direction: column;
+    }
+    
+    .resultHosting__groupCard {
+        width: 100%;
+    }
+  
+        /* mqMob__Section "Les plus populaires"*/
+   .resultPopular__group{
+        flex-direction: column;
+    }
+    
+    .resultPopular__groupCard {
+        width: 100%;
+    }
+    
+        /* mqMob__Section "Activités" */
+   .activity {
+        margin-top: 25px;
+        padding-bottom: 55px;
+    }
+
+    .activity__group {
+        flex-direction: column;
+    }
+    
+    .activity__groupCard {
+        width: 100%;
+    }
+    
+    .activity__groupCard img {
+        height: 141px;
+        object-fit: cover;
+    }
+   
+        /*mqMob__Footer*/
+   footer {
         flex-direction: column;
     }
     footer div {
