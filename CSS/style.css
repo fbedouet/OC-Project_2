@@ -115,7 +115,8 @@ header {
     font-weight: var(--card-font-weight);
 }
 
-.card__detail .fa-solid {
+.card__detail .fa-solid,
+.resultPopular__title .fa-solid {
     color: var(--blue);
 }
 
@@ -207,12 +208,14 @@ footer h2 {
     border: none;
     background-color: var(--grey);
     border-radius: 15px 0px 0px 15px;
+    width: 50px;
 }
 
 .filterSearch__textInput {
     border:none;
     border-top: 2px var(--grey) solid;
     border-bottom: 2px var(--grey) solid;
+    width: 195px;
 }
 
 form {
@@ -444,6 +447,7 @@ footer div {
 /* Media queries*/
     /* Medium devices (tablets, less than 1025px) */
 @media (max-width: 1024px) {
+        /* mqTab__Section "Trouver votre hebergement" */
     .filterBar {
         flex-direction: column;
         gap:20px;
@@ -455,15 +459,14 @@ footer div {
         flex-wrap: wrap;
     }
 
+        /*mqTab__Section "Hébergements et + populaires" */
+
     .result {
         flex-direction: column;
         gap: 50px;
     }
 
-    .resultHosting {
-        width: 100%;
-    }
-
+    .resultHosting,
     .resultPopular {
         width: 100%;
     }
@@ -493,8 +496,6 @@ footer div {
         max-width: 335px;
         position:relative;
     }
-
-        /* mqMob__General title and subitle */
 
         /* mqMob__Navigation Bar */
    .appBar {
@@ -559,25 +560,14 @@ footer div {
         border-radius: 0;
     }
 
-        /* mqMob__Section "Hebergement à Marseille"*/
    .resultHosting {
         background-color: white;
     }
     
-    .resultHosting__group {
-        flex-direction: column;
-    }
-    
-    .resultHosting__groupCard {
-        width: 100%;
-    }
-  
-        /* mqMob__Section "Les plus populaires"*/
-   .resultPopular__group{
-        flex-direction: column;
-    }
-    
-    .resultPopular__groupCard {
+    .resultHosting__groupCard,
+    .resultPopular__groupCard,
+    .activity__groupCard,
+    footer div   {
         width: 100%;
     }
     
@@ -587,24 +577,15 @@ footer div {
         padding-bottom: 55px;
     }
 
-    .activity__group {
+    .resultHosting__group,
+    .resultPopular__group,
+    .activity__group,
+    footer {
         flex-direction: column;
-    }
-    
-    .activity__groupCard {
-        width: 100%;
     }
     
     .activity__groupCard img {
         height: 141px;
         object-fit: cover;
-    }
-   
-        /*mqMob__Footer*/
-   footer {
-        flex-direction: column;
-    }
-    footer div {
-        width: 100%;
     }
 }
