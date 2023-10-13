@@ -23,6 +23,9 @@
     --filter-font: 'Raleway';
     --filter-font-weight: 700;
     --filter-font-size: 1.125rem; /* 18px */
+    --filter-nav-desk-font-size:1.063rem; /* 17px*/
+    --filter-nav-tab-font-size:1rem;  /*16px*/  
+    --filter-nav-mob-font-size:0.875rem;   /*14px*/
 
     --card-title-font: 'Raleway';
     --card-title-font-weight: 700;
@@ -60,8 +63,8 @@
     --hosting-img-height-size: 124px;
     --popular-img-height-size: 134px;
     --activity-img-height-size: 380px;
-    --logo-svg-width-size: 3.819rem;
-    --logo-svg-height-size: 1.188rem;
+    --logo-svg-width-size: 61.09px;
+    --logo-svg-height-size: 19px;
 
     /*Shadows*/
     --general-shadows: 0px 3px 15px rgba(0, 0, 0, 0.1);
@@ -240,6 +243,7 @@ form {
 .filterBar__nav {
     gap:10px;
     margin-left: 10px;
+    font-size: var(--filter-nav-desk-font-size);
 }
 
 .filterBar__navItem {
@@ -457,6 +461,7 @@ footer div {
     .filterBar__nav {
         margin-left: 0;
         flex-wrap: wrap;
+        font-size: var(--filter-nav-tab-font-size);
     }
 
         /*mqTab__Section "Hébergements et + populaires" */
@@ -486,7 +491,7 @@ footer div {
 }
 
     /* Small devices (mobil, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
         /* mqMob__Initialization */
     body {
         padding: 0;
@@ -542,11 +547,11 @@ footer div {
 
     .filterBar__nav {
         justify-content: center;
+        font-size: var(--filter-nav-mob-font-size);
     }
     
     .filterBar__navItem {
-        font-size: 0.875rem;
-        width: 136px;
+        width: 117px;
     }
     
         /*mqMob__Section "Hébergements et + populaires" */
