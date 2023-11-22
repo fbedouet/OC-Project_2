@@ -1,3 +1,3 @@
 # OC-Project_2 \r
-
-# Github page: https://github.com/fbedouet/OC-Project_3--Ohmyfood.git \r
+# Booki
+# Github page: https://fbedouet.github.io/OC-Project_2--Booki/ \r
